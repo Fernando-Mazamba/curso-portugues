@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Academia de Portugués – Curso Online</title>
+  <meta name="description" content="Aprendé portugués con clases online en vivo, material descargable y certificado. Cupos limitados. Inscribite hoy con descuento de lanzamiento." />
+  <meta property="og:title" content="Academia de Portugués – Curso Online" />
+  <meta property="og:description" content="Domina el portugués desde cero. Clases en vivo y grabadas, comunidad, soporte por WhatsApp y certificado." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://placehold.co/1200x630/png?text=Academia+de+Portugues" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <style>
+    :root{
+      --bg: #0b1220;
+      --card: #0f172a;
+      --muted: #94a3b8;
+      --text: #e2e8f0;
+      --primary: #22d3ee;      /* cian */
+      --primary-2: #38bdf8;    /* celeste */
+      --accent: #f59e0b;       /* dorado */
+      --ok: #10b981;
+      --danger: #ef4444;
+      --radius: 16px;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --shadow-soft: 0 8px 20px rgba(2,6,23,.35);
+      --whatsapp: #25D366;     /* Color de WhatsApp */
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;background:linear-gradient(180deg,#06111f 0%, #0b1220 40%, #0c1426 100%);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,"Helvetica Neue",Arial,"Apple Color Emoji","Segoe UI Emoji";}
+    a{color:inherit}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    /* Header */
+    header{position:sticky;top:0;z-index:30;background:rgba(11,18,32,.75);backdrop-filter: blur(8px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;box-shadow:var(--shadow-soft)}
+    .logo img{width:100%;height:100%;border-radius:10px;object-fit:cover}
+    .brand h1{font-size:16px;margin:0;letter-spacing:.2px}
+    nav a{margin:0 10px;text-decoration:none;color:var(--muted);font-size:14px}
+    nav a:hover{color:white}
+    .cta-min{background:linear-gradient(90deg,var(--primary) 0%,var(--primary-2) 100%);color:#06111f;border:none;padding:10px 14px;border-radius:999px;font-weight:700;box-shadow:var(--shadow)}
+    /* Hero */
+    .hero{padding:64px 0 40px;}
+    .hero .content{display:grid;grid-template-columns:1.3fr 1fr;gap:28px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border:1px solid rgba(255,255,255,.12);border-radius:999px;color:var(--muted);font-size:12px}
+    .hero h2{font-size:44px;line-height:1.08;margin:14px 0 10px}
+    .hero p{color:var(--muted);font-size:18px}
+    .badges{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+    .badge{background:#0e1a2b;border:1px solid rgba(255,255,255,.08);padding:8px 12px;border-radius:999px;font-size:12px;color:#cbd5e1}
+    .actions{display:flex;gap:12px;margin-top:12px;flex-wrap:wrap}
+    .btn{border:none;border-radius:12px;padding:14px 18px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block;text-align:center;transition:transform .2s, box-shadow .2s;}
+    .btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,0,0,.4)}
+    .btn-primary{background:linear-gradient(90deg,var(--primary) 0%, var(--primary-2) 100%);color:#07111f}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,.15);color:#e5e7eb}
+    .btn-whatsapp{background:var(--whatsapp);color:white}
+    .hero .card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+    .mock{aspect-ratio:16/10;border-radius:12px;background:radial-gradient(1200px 500px at -10% -10%, rgba(56,189,248,.45), transparent 60%),
+                     radial-gradient(1000px 400px at 110% 10%, rgba(34,211,238,.3), transparent 60%),
+                     linear-gradient(180deg,#0b1220,#0e1a2b);display:grid;place-items:center;border:1px solid rgba(255,255,255,.08);overflow:hidden}
+    .mock img{width:100%;height:100%;object-fit:cover}
+    /* Section */
+    section{padding:64px 0;border-top:1px solid rgba(255,255,255,.06)}
+    h3{font-size:28px;margin:0 0 12px}
+    .lead{color:var(--muted);margin:0 0 22px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{background:var(--card);border-radius:var(--radius);border:1px solid rgba(255,255,255,.06);padding:18px;box-shadow:var(--shadow-soft)}
+    .icon{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(34,211,238,.2),rgba(56,189,248,.15));border:1px solid rgba(255,255,255,.1)}
+    .muted{color:var(--muted)}
+    .list{display:grid;gap:8px;margin:10px 0 0;padding:0}
+    .list li{list-style:none;display:flex;gap:8px;align-items:flex-start}
+    .tick{width:18px;height:18px;border-radius:999px;background:rgba(16,185,129,.15);display:inline-grid;place-items:center;border:1px solid rgba(16,185,129,.35);margin-top:2px}
+    /* Programa */
+    .columns{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .module h4{margin:0 0 6px}
+    .module .pill{display:inline-block;background:rgba(245,158,11,.15);color:#fde68a;border:1px solid rgba(245,158,11,.4);padding:4px 8px;border-radius:999px;font-size:12px;margin-bottom:6px}
+    /* Pricing */
+    .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .price{font-size:34px;font-weight:800}
+    .old{color:#94a3b8;text-decoration:line-through;font-weight:500;margin-left:6px;font-size:18px}
+    .plan.pop{border:1px solid rgba(34,211,238,.6);box-shadow:0 0 0 2px rgba(34,211,238,.15), var(--shadow)}
+    .plan .cta{margin-top:14px;width:100%}
+    /* Testimonios */
+    .testi{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    blockquote{margin:0}
+    blockquote p{color:#cbd5e1}
+    blockquote footer{margin-top:8px;color:#94a3b8;font-size:14px}
+    /* FAQ */
+    details{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:14px}
+    details+details{margin-top:10px}
+    summary{cursor:pointer;font-weight:600}
+    /* Form */
+    form{display:grid;gap:10px}
+    input,select,textarea{background:#0b1628;color:#e5e7eb;border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:12px;width:100%}
+    label{font-size:14px;color:#cbd5e1}
+    .inline{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    /* Footer */
+    footer{padding:38px 0;color:#cbd5e1}
+    .social{display:flex;gap:14px}
+    .small{font-size:12px;color:#94a3b8}
+    /* WhatsApp flotante */
+    .whatsapp-float{position:fixed;bottom:24px;right:24px;z-index:100;background:var(--whatsapp);width:60px;height:60px;border-radius:50%;display:grid;place-items:center;box-shadow:0 6px 20px rgba(37,211,102,.4);transition:transform .3s, box-shadow .3s;}
+    .whatsapp-float:hover{transform:scale(1.1);box-shadow:0 8px 25px rgba(37,211,102,.5)}
+    .whatsapp-float svg{width:32px;height:32px;fill:white}
+    /* Responsive */
+    @media (max-width: 900px){
+      .hero .content{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr}
+      .columns{grid-template-columns:1fr}
+      .pricing{grid-template-columns:1fr}
+      .testi{grid-template-columns:1fr}
+      nav{display:none}
+      .whatsapp-float{bottom:20px;right:20px;width:56px;height:56px;}
+    }
+  </style>
+</head>
+<body>
+  <!-- Botón flotante de WhatsApp -->
+  <a href="https://wa.me/595982847245?text=Hola,%20me%20interesa%20saber%20más%20sobre%20el%20curso%20de%20portugués" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 32 32">
+      <path d="M17.636 14.665h-1.669c-.276 0-.5.224-.5.5v1.669c0 .276.224.5.5.5h1.669c.276 0 .5-.224.5-.5v-1.669c0-.276-.224-.5-.5-.5zm-4.304 0h-1.669c-.276 0-.5.224-.5.5v1.669c0 .276.224.5.5.5h1.669c.276 0 .5-.224.5-.5v-1.669c0-.276-.224-.5-.5-.5zm8.608 0h-1.669c-.276 0-.5.224-.5.5v1.669c0 .276.224.5.5.5h1.669c.276 0 .5-.224.5-.5v-1.669c0-.276-.224-.5-.5-.5z"/>
+      <path d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zm7.742 21.963c-.198.565-1.118 1.03-1.718 1.101-.427.049-.979.087-2.849-.979-2.359-1.341-3.833-4.181-3.949-4.375-.115-.194-.927-1.418-.927-2.705s.579-1.898.773-2.114c.194-.216.514-.281.734-.281h.625c.247 0 .432.086.554.308.198.36.677 1.246.737 1.336.061.09.1.195.01.329-.09.134-.135.216-.247.337-.112.122-.235.271-.336.361-.101.09-.205.18-.087.349.117.169.525.721 1.127 1.168.775.571 1.424.749 1.601.832.177.083.275.041.385-.09.11-.131.471-.551.597-.738.126-.186.253-.155.428-.093.175.062 1.109.523 1.299.618.191.095.317.144.363.225.047.082.047.464-.151 1.029z"/>
+    </svg>
+  </a>
+
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">
+          <!-- Reemplaza la siguiente línea con tu logotipo -->
+          <img src="logo/log.png">
+        </div>
+        <h1>Academia de Portugués</h1>
+      </div>
+      <nav aria-label="Navegación principal">
+        <a href="#beneficios">Beneficios</a>
+        <a href="#programa">Programa</a>
+        <a href="#planes">Planes</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#faq">FAQ</a>
+        <a href="#inscripcion" class="cta-min">Inscribirme</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container content">
+        <div>
+          <span class="eyebrow">🇧🇷 Curso online • Cupos limitados</span>
+          <h2>Aprendé Portugués<br/> del básico al avanzado</h2>
+          <p>Clases en vivo y grabadas, método conversacional para hispanohablantes, soporte por WhatsApp y <strong>certificado</strong>. Empezá hoy con precio de lanzamiento.</p>
+          <div class="badges">
+            <span class="badge">✅ Garantía 7 días</span>
+            <span class="badge">👥 +500 alumnos</span>
+            <span class="badge">📱 Acceso en móvil</span>
+          </div>
+          <div class="actions">
+            <a class="btn btn-primary" href="#planes">Quiero empezar ahora</a>
+            <a class="btn btn-ghost" href="#inscripcion">Probar una clase</a>
+            <a class="btn btn-whatsapp" href="https://wa.me/595982847245?text=Hola,%20quiero%20más%20información%20sobre%20el%20curso%20de%20portugués" target="_blank" rel="noopener">💬 Consultar por WhatsApp</a>
+          </div>
+        </div>
+        <div class="card">
+          
+    <div class="mock"> 
+      <!-- Reemplaza con tu imagen o video -->
+      <img src="logo/female-speaker-giving-presentation-in-hall-at-university-workshop-audience-or-conference-hall.jpg" width="1620" height="1080"> 
+    </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFICIOS -->
+    <section id="beneficios">
+      <div class="container">
+        <h3>¿Por qué elegirnos?</h3>
+        <p class="lead">Diseñado para hispanohablantes: explicaciones claras, práctica guiada y resultados reales en pocas semanas.</p>
+        <div class="grid-3">
+          <div class="card">
+            <div class="icon">🗣️</div>
+            <h4>Enfocado en conversación</h4>
+            <p class="muted">Habla desde la primera semana con situaciones reales: trabajo, viajes y estudios.</p>
+            <ul class="list">
+              <li><span class="tick">✓</span> Role-plays y feedback</li>
+              <li><span class="tick">✓</span> Vocabulario útil del día a día</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="icon">⏱️</div>
+            <h4>Flexibilidad total</h4>
+            <p class="muted">Clases en vivo + grabadas para estudiar a tu ritmo y repetir cuando quieras.</p>
+            <ul class="list">
+              <li><span class="tick">✓</span> Campus 24/7</li>
+              <li><span class="tick">✓</span> App móvil</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="icon">🎓</div>
+            <h4>Certificado avalado</h4>
+            <p class="muted">Recibí tu certificado digital al finalizar cada nivel.</p>
+            <ul class="list">
+              <li><span class="tick">✓</span> Niveles A1–C1</li>
+              <li><span class="tick">✓</span> Examen final incluido</li>
+            </ul>
+          </div>
+        </div>
+        <div style="text-align:center; margin-top:28px">
+          <a class="btn btn-whatsapp" href="https://wa.me/595982847245?text=Hola,%20tengo%20preguntas%20sobre%20los%20beneficios%20del%20curso" target="_blank" rel="noopener">💬 Preguntar por WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROGRAMA -->
+    <section id="programa">
+      <div class="container">
+        <h3>Programa del curso</h3>
+        <p class="lead">Aprendizaje por módulos con metas claras y medibles.</p>
+        <div class="columns">
+          <div class="card module">
+            <span class="pill">A1–A2 • Fundamentos</span>
+            <h4>Desde cero hasta conversaciones básicas</h4>
+            <ul class="list">
+              <li><span class="tick">✓</span> Pronunciación y ritmo del portugués</li>
+              <li><span class="tick">✓</span> Verbos más usados y frases clave</li>
+              <li><span class="tick">✓</span> Presentaciones, compras, transporte</li>
+            </ul>
+          </div>
+          <div class="card module">
+            <span class="pill">B1–B2 • Dominio práctico</span>
+            <h4>Fluidez para trabajo y estudios</h4>
+            <ul class="list">
+              <li><span class="tick">✓</span> Reuniones, entrevistas y e-mails</li>
+              <li><span class="tick">✓</span> Gramática aplicada sin complicaciones</li>
+              <li><span class="tick">✓</span> Preparación para certificaciones</li>
+            </ul>
+          </div>
+          <div class="card module">
+            <span class="pill">C1 • Avanzado</span>
+            <h4>Precisión y naturalidad</h4>
+            <ul class="list">
+              <li><span class="tick">✓</span> Matices, giros y expresiones idiomáticas</li>
+              <li><span class="tick">✓</span> Presentaciones de alto impacto</li>
+              <li><span class="tick">✓</span> Preparación para entornos profesionales</li>
+            </ul>
+          </div>
+          <div class="card module">
+            <span class="pill">Bonos</span>
+            <h4>Extras que aceleran tu progreso</h4>
+            <ul class="list">
+              <li><span class="tick">✓</span> Ebook "Portugués para hispanohablantes"</li>
+              <li><span class="tick">✓</span> Comunidad y retos semanales</li>
+              <li><span class="tick">✓</span> Soporte por WhatsApp</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLANES / PRECIOS -->
+    <section id="planes">
+      <div class="container">
+        <h3>Planes y precios</h3>
+        <p class="lead">Promoción de lanzamiento por tiempo limitado. Pagás en tu moneda.</p>
+        <div class="pricing">
+          <div class="card plan">
+            <h4>Básico</h4>
+            <p class="muted">Ideal para empezar</p>
+            <div><span class="price">US$ 59</span> <span class="old">US$ 99</span></div>
+            <ul class="list">
+              <li><span class="tick">✓</span> Acceso a A1–A2 (grabado)</li>
+              <li><span class="tick">✓</span> Material descargable</li>
+              <li><span class="tick">✓</span> Certificado por nivel</li>
+            </ul>
+            <a class="btn btn-ghost cta" href="#inscripcion">Elegir Básico</a>
+          </div>
+          <div class="card plan pop">
+            <h4>Completo</h4>
+            <p class="muted">Más elegido</p>
+            <div><span class="price">US$ 99</span> <span class="old">US$ 199</span></div>
+            <ul class="list">
+              <li><span class="tick">✓</span> A1–B2 (vivo + grabado)</li>
+              <li><span class="tick">✓</span> Grupos de conversación</li>
+              <li><span class="tick">✓</span> Soporte por WhatsApp</li>
+              <li><span class="tick">✓</span> Certificado final</li>
+            </ul>
+            <a class="btn btn-primary cta" href="#inscripcion">Quiero el Completo</a>
+          </div>
+          <div class="card plan">
+            <h4>Empresarial</h4>
+            <p class="muted">Para equipos</p>
+            <div><span class="price">A convenir</span></div>
+            <ul class="list">
+              <li><span class="tick">✓</span> Clases in-company</li>
+              <li><span class="tick">✓</span> Objetivos a medida</li>
+              <li><span class="tick">✓</span> Reportes de progreso</li>
+            </ul>
+            <a class="btn btn-ghost cta" href="#contacto">Solicitar propuesta</a>
+          </div>
+        </div>
+        <div style="text-align:center; margin-top:28px">
+          <a class="btn btn-whatsapp" href="https://wa.me/595982847245?text=Hola,%20quiero%20consultar%20sobre%20los%20precios%20y%20planes%20disponibles" target="_blank" rel="noopener">💬 Consultar precios por WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section id="testimonios">
+      <div class="container">
+        <h3>Historias reales</h3>
+        <p class="lead">Lo que dicen nuestros estudiantes.</p>
+        <div class="testi">
+          <blockquote class="card">
+            <p>"En dos meses pasé de cero a tener conversaciones básicas con mis clientes de Brasil."</p>
+            <footer>— Juan, Panamá</footer>
+          </blockquote>
+          <blockquote class="card">
+            <p>"Las clases en vivo y los grupos de conversación fueron la clave para soltarme."</p>
+            <footer>— María, México</footer>
+          </blockquote>
+          <blockquote class="card">
+            <p>"Excelente acompañamiento por WhatsApp. La metodología es simple y efectiva."</p>
+            <footer>— Rodrigo, Paraguay</footer>
+          </blockquote>
+        </div>
+        <div style="text-align:center; margin-top:28px">
+          <a class="btn btn-whatsapp" href="https://wa.me/595982847245?text=Hola,%20quiero%20conocer%20más%20experiencias%20de%20estudiantes" target="_blank" rel="noopener">💬 Hablar con estudiantes</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="container">
+        <h3>Preguntas frecuentes</h3>
+        <details>
+          <summary>¿Las clases son en vivo o grabadas?</summary>
+          <p>Ofrecemos clases en vivo que son grabadas y posteriormente puestas a disposición de los estudiantes para su acceso en cualquier momento.</p>
+        </details>
+        <details>
+          <summary>¿Necesito conocimientos previos?</summary>
+          <p>No. El curso comienza desde cero (A1) y te acompaña hasta niveles intermedios/avanzados.</p>
+        </details>
+        <details>
+          <summary>¿Entregan certificado?</summary>
+          <p>Sí, emitimos certificados digitales por nivel aprobado.</p>
+        </details>
+        <details>
+          <summary>¿Cómo se realiza el pago?</summary>
+          <p>Aceptamos tarjetas y transferencias. También podemos coordinar pagos locales en Paraguay.</p>
+        </details>
+        <div style="text-align:center; margin-top:28px">
+          <a class="btn btn-whatsapp" href="https://wa.me/595982847245?text=Hola,%20tengo%20otras%20preguntas%20sobre%20el%20curso" target="_blank" rel="noopener">💬 Otras preguntas por WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSCRIPCIÓN -->
+    <section id="inscripcion">
+      <div class="container">
+        <h3>Inscribite ahora</h3>
+        <p class="lead">Completá el formulario y te contactamos por WhatsApp en minutos.</p>
+        <div class="card">
+          <form id="contactForm">
+            <div class="inline">
+              <div>
+                <label for="nombre">Nombre y apellido</label>
+                <input id="nombre" name="nombre" required placeholder="Tu nombre" />
+              </div>
+              <div>
+                <label for="pais">País</label>
+                <select id="pais" name="pais" required>
+                  <option value="" selected disabled>Seleccioná…</option>
+                  <option>Paraguay</option>
+                  <option>México</option>
+                  <option>Panamá</option>
+                  <option>Argentina</option>
+                  <option>Otro</option>
+                </select>
+              </div>
+            </div>
+            <div class="inline">
+              <div>
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" required placeholder="tu@email.com" />
+              </div>
+              <div>
+                <label for="whatsapp">WhatsApp</label>
+                <input id="whatsapp" name="whatsapp" required placeholder="+595 000 000 000" />
+              </div>
+            </div>
+            <div>
+              <label for="plan">Plan</label>
+              <select id="plan" name="plan" required>
+                <option value="Completo" selected>Completo (recomendado)</option>
+                <option value="Básico">Básico</option>
+                <option value="Empresarial">Empresarial</option>
+              </select>
+            </div>
+            <button class="btn btn-primary" type="submit">Quiero mi lugar</button>
+            <p class="small">🔒 Protegemos tus datos. Podés solicitar baja en cualquier momento.</p>
+          </form>
+        </div>
+        <div style="margin-top:12px" class="small">¿Preferís escribirnos directo? <a href="https://wa.me/595982847245" target="_blank" rel="noopener">WhatsApp</a>.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contacto">
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:14px;flex-wrap:wrap">
+        <div>
+          <div class="brand" style="margin-bottom:8px">
+            <div class="logo" aria-hidden="true">
+              <!-- Reemplaza la siguiente línea con tu logotipo -->
+              <img src="logo/log.png">
+            </div>
+            <strong>Academia de Portugués</strong>
+          </div>
+          <div class="small">San Lorenzo, Paraguay</div>
+          <div class="small">📧 <a href="mailto:escueladeportugues646@gmail.com">escueladeportugues646@gmail.com</a></div>
+          <div class="small">📱 <a href="https://wa.me/595982847245" class="btn-whatsapp" style="padding:4px 8px;border-radius:6px;display:inline-block;margin-top:4px">+595 982 847 245</a></div>
+        </div>
+        <div class="social">
+          <a class="small" href="https://www.instagram.com/academia_portugu/" target="_blank" rel="noopener">Instagram</a>
+          <a class="small" href="https://www.facebook.com/profile.php?id=61558516845169" target="_blank" rel="noopener">Facebook</a>
+          <a class="small" href="#" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </div>
+      <p class="small" style="margin-top:14px">© <span id="year"></span> Academia de Portugués. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Año dinámico
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Scroll suave para anclas
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id=a.getAttribute('href');
+        if(id.length>1){
+          e.preventDefault();
+          document.querySelector(id).scrollIntoView({behavior:'smooth', block:'start'});
+        }
+      });
+    });
+    
+    // Envío de formulario a WhatsApp
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const nombre = document.getElementById('nombre').value;
+      const pais = document.getElementById('pais').value;
+      const email = document.getElementById('email').value;
+      const whatsapp = document.getElementById('whatsapp').value;
+      const plan = document.getElementById('plan').value;
+      
+      const mensaje = `Hola, me interesa el curso de portugués.%0A%0A*Nombre:* ${nombre}%0A*País:* ${pais}%0A*Email:* ${email}%0A*WhatsApp:* ${whatsapp}%0A*Plan elegido:* ${plan}`;
+      
+      window.open(`https://wa.me/595982847245?text=${mensaje}`, '_blank');
+      
+      // Opcional: mostrar mensaje de confirmación
+      alert('¡Gracias! Serás redirigido a WhatsApp para completar tu inscripción.');
+    });
+  </script>
+
+  <!-- SEO Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "Curso de Portugués Online",
+    "provider": {
+      "@type": "Organization",
+      "name": "Academia de Portugués",
+      "sameAs": ""
+    },
+    "description": "Clases en vivo y grabadas, método conversacional, soporte por WhatsApp y certificado.",
+    "inLanguage": "es",
+    "offers": {
+      "@type": "Offer",
+      "price": "99.00",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
+</body>
+</html>
